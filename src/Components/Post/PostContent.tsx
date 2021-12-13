@@ -53,7 +53,6 @@ const PostContent = (props: Props) => {
 
   const handleSlideChange = (slideIndex: number) => {
     setActiveSlide(slideIndex);
-    console.log(slideIndex);
   };
 
   return (
