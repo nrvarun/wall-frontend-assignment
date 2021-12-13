@@ -1,12 +1,17 @@
 import NFT from "@components/NFT";
 
-import { StyledContainer, StyledContentGrid } from "./home.styles";
+import {
+  StyledContainer,
+  StyledContentGrid,
+  StyledHeading,
+} from "./home.styles";
 
 interface Props {}
 
 const Home = (props: Props) => {
   return (
     <StyledContainer>
+      <StyledHeading>NFT Cards</StyledHeading>
       <StyledContentGrid>
         <NFT
           img_url="/assets/cards/1.png"

@@ -17,3 +17,10 @@ export const StyledContentGrid = styled.div`
   grid-gap: 0rem 1.5rem;
   min-height: 320px;
 `;
+
+export const StyledHeading = styled.h2`
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 1rem 0;
+`;
