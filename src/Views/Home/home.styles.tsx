@@ -15,6 +15,7 @@ export const StyledContentGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 330px);
   grid-gap: 0rem 1.5rem;
+  margin: 0 0 4rem 0;
   min-height: 320px;
 `;
 
