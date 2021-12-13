@@ -1,0 +1,142 @@
+import { THEME } from "config";
+import styled from "styled-components";
+
+export const StyledWrapper = styled.article`
+  margin: 0 0 0.75rem 0;
+  border-radius: ${THEME.cardBorderRadius};
+`;
+
+export const StyledAuthorWrapper = styled.div`
+  border-radius: ${THEME.cardBorderRadius};
+  background-color: #000000;
+  padding: 0.75rem;
+  display: grid;
+  grid-template-columns: auto auto;
+`;
+
+export const StyledNFTShare = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+
+  img {
+    margin: 0 0.75rem 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+`;
+
+export const StyledAuthorContent = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const StyledAuthor = styled.div`
+  display: flex;
+`;
+
+export const StyledAuthorAvatar = styled.img`
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin: 0 0.5rem 0 0;
+`;
+
+export const StyledNFTActionIcon = styled.img`
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+`;
+
+export const StyledAuthorName = styled.p`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  letter-spacing: 0.01em;
+  color: #fafafa;
+`;
+
+export const StyledNFTContent = styled.div`
+  padding: 0.875rem;
+`;
+
+export const StyledNFTImage = styled.img`
+  height: 330px;
+  min-height: 330px;
+  width: 100%;
+  z-index: 2;
+  object-fit: cover;
+  display: block;
+  border-radius: ${THEME.cardBorderRadius};
+`;
+
+export const StyledNFTContentWrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+  border-radius: ${THEME.cardBorderRadius};
+`;
+
+export const StyledNFTContentOverlay = styled.div`
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, #000000 100%);
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+  transform: translateX(10%);
+`;
+
+export const StyledCardWrapper = styled.div`
+  box-shadow: 8.01437px 19.2345px 19.2345px -8.01437px rgba(0, 0, 0, 0.3);
+  border-radius: ${THEME.cardBorderRadius};
+  cursor: pointer;
+  min-height: 320px;
+  margin: 0.75rem 0px;
+  background: #757f9a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #d7dde8,
+    #757f9a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #d7dde8,
+    #757f9a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  &:hover ${StyledNFTContentOverlay} {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+export const StyledNFTContentTitle = styled.h3`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0 0 0.35rem 0;
+  letter-spacing: 0.01em;
+  color: #fafafa;
+`;
+
+export const StyledNFTContentDetail = styled.p`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #a2a2a2;
+`;
