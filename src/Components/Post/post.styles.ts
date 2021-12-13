@@ -157,6 +157,14 @@ export const StyledPostFooterCollectCTA = styled.a`
   border: 1px solid #494949;
   box-sizing: border-box;
   border-radius: 40px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:focus,
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
 `;
 
 export const StyledPostFooterCollectIcon = styled.img`
@@ -222,22 +230,33 @@ export const StyledPostThumbGrid = styled.ul`
   list-style: none;
 `;
 
+export const StyledPostThumbGridItemOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+`;
+
 export const StyledPostThumbGridItem = styled.li`
   position: relative;
   border-radius: 0.25rem;
   height: 116px;
   overflow: hidden;
+  cursor: pointer;
+
+  &:hover ${StyledPostThumbGridItemOverlay} {
+    opacity: 1;
+  }
 `;
 
 export const StyledPostThumb = styled.img`
   width: 100%;
   height: 100%;
-  cursor: pointer;
   object-fit: cover;
-  transform: scale(1);
+  border-radius: 0.25rem;
   transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.1);
-  }
 `;

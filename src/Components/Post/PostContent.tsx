@@ -6,6 +6,7 @@ import {
   StyledPostThumb,
   StyledPostThumbGrid,
   StyledPostThumbGridItem,
+  StyledPostThumbGridItemOverlay,
 } from "./post.styles";
 
 interface Props {}
@@ -75,6 +76,7 @@ const PostContent = (props: Props) => {
             }}
           >
             <StyledPostThumb src={img_url} alt={title} />
+            <StyledPostThumbGridItemOverlay />
           </StyledPostThumbGridItem>
         ))}
       </StyledPostThumbGrid>
