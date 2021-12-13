@@ -5,13 +5,17 @@ import {
   StyledAuthorWrapper,
   StyledCardWrapper,
   StyledNFTActionIcon,
+  StyledNFTActions,
   StyledNFTContent,
   StyledNFTContentDetail,
   StyledNFTContentOverlay,
   StyledNFTContentTitle,
   StyledNFTContentWrapper,
+  StyledNFTCryptoIcon,
   StyledNFTImage,
+  StyledNFTLiveButton,
   StyledNFTShare,
+  StyledNFTStatsButton,
   StyledWrapper,
 } from "./nft.styles";
 import NFTOverlayContent from "./NFTOverlayContent";
@@ -27,10 +31,17 @@ const NFT = ({ title, description, img_url }: NFTCardProps) => {
     <StyledWrapper>
       <StyledCardWrapper>
         <StyledNFTContentWrapper>
+          <StyledNFTCryptoIcon
+            src="/assets/icons/crypto.svg"
+            alt="crypto icon"
+          />
+          <StyledNFTActions>
+            <StyledNFTLiveButton>Live</StyledNFTLiveButton>
+            <StyledNFTStatsButton>10.5Ξ</StyledNFTStatsButton>
+          </StyledNFTActions>
           <StyledNFTImage src={img_url} alt="nft" />
-          <StyledNFTContentOverlay>
-            <NFTOverlayContent title={title} description={description} />
-          </StyledNFTContentOverlay>
+          <StyledNFTContentOverlay />
+          <NFTOverlayContent title={title} description={description} />
         </StyledNFTContentWrapper>
       </StyledCardWrapper>
       <StyledAuthorWrapper>

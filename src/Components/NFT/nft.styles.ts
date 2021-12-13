@@ -8,7 +8,8 @@ export const StyledWrapper = styled.article`
 
 export const StyledAuthorWrapper = styled.div`
   border-radius: calc(2 * ${THEME.cardBorderRadius});
-  background-color: #000000;
+  background-color: #111111;
+  border: 1px solid #1a1a1a;
   padding: 0.75rem;
   display: grid;
   grid-template-columns: auto auto;
@@ -63,6 +64,15 @@ export const StyledAuthorName = styled.p`
 
 export const StyledNFTContent = styled.div`
   padding: 0.875rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: translateY(40%);
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  z-index: 3;
+  pointer-events: none;
 `;
 
 export const StyledNFTImage = styled.img`
@@ -83,7 +93,7 @@ export const StyledNFTContentWrapper = styled.div`
 
 export const StyledNFTContentOverlay = styled.div`
   position: absolute;
-  z-index: 10;
+  z-index: 2;
   height: 100%;
   width: 100%;
   top: 0;
@@ -93,9 +103,9 @@ export const StyledNFTContentOverlay = styled.div`
   display: flex;
   align-items: flex-end;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, #000000 100%);
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
   opacity: 0;
-  transform: translateX(10%);
+  pointer-events: none;
 `;
 
 export const StyledCardWrapper = styled.div`
@@ -118,6 +128,12 @@ export const StyledCardWrapper = styled.div`
 
   &:hover ${StyledNFTContentOverlay} {
     opacity: 1;
+    pointer-events: all;
+  }
+
+  &:hover ${StyledNFTContent} {
+    opacity: 1;
+    pointer-events: all;
     transform: translateX(0);
   }
 `;
@@ -139,4 +155,64 @@ export const StyledNFTContentDetail = styled.p`
   line-height: 20px;
   letter-spacing: 0.01em;
   color: #a2a2a2;
+`;
+
+export const StyledNFTCryptoIcon = styled.img`
+  position: absolute;
+  top: 0.875rem;
+  left: 0.875rem;
+  width: 2rem;
+  height: 2rem;
+`;
+
+export const StyledNFTActions = styled.div`
+  position: absolute;
+  top: 0.875rem;
+  right: 0.875rem;
+  display: flex;
+  align-items: center;
+
+  p {
+    margin: 0 0.5rem 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+`;
+
+export const StyledNFTLiveButton = styled.p`
+  padding: 0.15rem 0.75rem;
+  background: #dc3545;
+  border-radius: 56px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  /* Text/High */
+
+  color: #fafafa;
+`;
+
+export const StyledNFTStatsButton = styled.p`
+  padding: 0.15rem 0.75rem;
+  background: #080808;
+  border-radius: 56px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  /* Text/High */
+
+  color: #fafafa;
 `;
