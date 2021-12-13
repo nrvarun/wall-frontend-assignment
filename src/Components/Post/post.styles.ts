@@ -216,7 +216,7 @@ export const StyledPostContentSlide = styled.img`
 export const StyledPostThumbGrid = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-gap: 0.5rem;
+  grid-gap: 0.25rem;
   padding: 0;
   margin: 0;
   list-style: none;
