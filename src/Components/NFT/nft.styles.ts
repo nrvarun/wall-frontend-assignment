@@ -7,7 +7,7 @@ export const StyledWrapper = styled.article`
 `;
 
 export const StyledAuthorWrapper = styled.div`
-  border-radius: ${THEME.cardBorderRadius};
+  border-radius: calc(2 * ${THEME.cardBorderRadius});
   background-color: #000000;
   padding: 0.75rem;
   display: grid;
